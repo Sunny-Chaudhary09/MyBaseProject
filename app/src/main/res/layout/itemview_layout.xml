@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@tools:sample/full_names"
+        android:background="#E1303F9F"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:paddingLeft="8dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:id="@+id/catogary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageview"
+        app:layout_constraintStart_toStartOf="@+id/imageview"
+        app:layout_constraintEnd_toEndOf="@+id/imageview"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/catogary"
+        app:layout_constraintStart_toStartOf="@+id/imageview"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageview"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

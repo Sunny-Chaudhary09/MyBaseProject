@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.OtpFragment">
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#474747"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user"
+        android:textSize="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Verify Your Phone Number"/>
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#8E8E8E"
+        android:textSize="20dp"
+        android:text="Enter the verification code/otp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerify"
+        app:layout_constraintStart_toStartOf="@id/tvVerify"
+        app:layout_constraintEnd_toEndOf="@+id/tvVerify"/>
+
+    <TextView
+        android:id="@+id/tvmobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#8E8E8E"
+        android:textSize="20dp"
+        android:text="Code just sent to your mobile"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCode"
+        app:layout_constraintStart_toStartOf="@id/tvCode"
+        app:layout_constraintEnd_toEndOf="@+id/tvCode"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_background"
+        android:inputType="phone"
+        android:maxLength="1"
+        app:layout_constraintStart_toStartOf="@id/tvVerify"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_background"
+        android:inputType="phone"
+        android:maxLength="1"
+        app:layout_constraintStart_toEndOf="@id/et1"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile" />
+
+    <EditText
+        android:id="@+id/et3"
+        android:maxLength="1"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile"
+        app:layout_constraintStart_toEndOf="@id/et2"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="3dp"
+        android:inputType="phone"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/et4"
+        android:maxLength="1"
+        android:inputType="phone"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile"
+        app:layout_constraintStart_toEndOf="@id/et3"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="3dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/et5"
+        android:maxLength="1"
+        android:inputType="phone"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile"
+        app:layout_constraintStart_toEndOf="@id/et4"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="3dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:id="@+id/et6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/rounded_background"
+        android:inputType="phone"
+        android:maxLength="1"
+        app:layout_constraintEnd_toEndOf="@+id/tvVerify"
+        app:layout_constraintStart_toEndOf="@id/et5"
+        app:layout_constraintTop_toBottomOf="@id/tvmobile" />
+
+    <TextView
+        android:id="@+id/tvNotrecived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/et3"
+        app:layout_constraintStart_toStartOf="@+id/tvVerify"
+        app:layout_constraintEnd_toEndOf="@id/tvVerify"
+        android:text="Didnt,Recicve the code?"
+        android:textSize="14dp"
+        android:layout_marginTop="47dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+      android:id="@+id/tvResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF4A4D"
+        android:textSize="16dp"
+        android:text="Resend"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotrecived"
+        app:layout_constraintStart_toStartOf="@+id/tvNotrecived"
+        app:layout_constraintEnd_toEndOf="@+id/tvNotrecived"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResend" />
+
+    <TextView
+        android:id="@+id/tvAcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:textSize="14dp"
+        android:text="Dont have an Acount?"
+        android:textColor="#606060"
+        app:layout_constraintStart_toStartOf="@+id/btnContinue"
+        app:layout_constraintEnd_toEndOf="@+id/btnContinue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

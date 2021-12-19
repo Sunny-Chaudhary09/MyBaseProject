@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+   <ImageView
+       android:id="@+id/employe_img"
+       android:layout_width="100dp"
+       android:layout_height="125dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/employe_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/employe_img"
+            android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/employe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="name"
+                app:layout_constraintTop_toBottomOf="@id/employe_id"
+                app:layout_constraintStart_toEndOf="@id/employe_img"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/employe_salry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="salry"
+                app:layout_constraintTop_toBottomOf="@id/employe_name"
+                app:layout_constraintStart_toEndOf="@id/employe_img"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/employe_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="age"
+                app:layout_constraintTop_toBottomOf="@id/employe_salry"
+                app:layout_constraintStart_toEndOf="@id/employe_img"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

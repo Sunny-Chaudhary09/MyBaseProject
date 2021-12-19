@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:clickable="false"
+    tools:context=".Fragments.SignupFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+     <TextView
+        android:id="@+id/tvfirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Glambar"
+        android:textColor="#FF5E64"
+        android:textSize="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="salon tagline goes here"
+        android:layout_marginTop="13dp"
+        android:textColor="#0F3F6C"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfirst" />
+
+    <EditText
+        android:id="@+id/edt_username"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:paddingStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Username"
+        android:layout_marginTop="61dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingLeft="8dp" />
+
+    <EditText
+        android:id="@+id/edt_mobileNumber"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:paddingStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_username"
+        app:layout_constraintEnd_toEndOf="@+id/edt_username"
+        android:hint="MobileNumber"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="@+id/edt_username"
+        android:paddingLeft="8dp" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:paddingStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_mobileNumber"
+        app:layout_constraintEnd_toEndOf="@+id/edt_mobileNumber"
+        android:hint="Email"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="@+id/edt_mobileNumber"
+        android:paddingLeft="8dp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:paddingStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        app:layout_constraintEnd_toEndOf="@+id/edt_mobileNumber"
+        android:hint="Password"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="@+id/edt_mobileNumber"
+        android:paddingLeft="8dp" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:text="SignUp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="@id/edt_password"
+        app:layout_constraintStart_toStartOf="@id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+    <TextView
+        android:id="@+id/tvContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue with"
+        android:textColor="#4F5A75"
+        android:layout_marginTop="45dp"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tvContinue"
+        app:layout_constraintStart_toStartOf="@+id/edt_mobileNumber"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        android:layout_marginTop="24dp"
+        android:textAllCaps="false"
+        android:text="g"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="twiter"
+        android:textAllCaps="false"
+        android:background="@drawable/background_twiter"
+        android:textColor="@color/white"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        android:layout_marginLeft="5dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="f"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/background_facebook"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="@id/edt_mobileNumber"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintBottom_toBottomOf="@id/button1"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        android:layout_marginLeft="5dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+

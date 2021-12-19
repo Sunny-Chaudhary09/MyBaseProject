@@ -1,13 +1,16 @@
 package com.example.mytest.Adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.mytest.Activities.DetailActivity
 import com.example.mytest.Data
 import com.example.mytest.Activities.MainActivity
 import com.example.mytest.R
+import kotlinx.android.synthetic.main.item_employee.view.*
 import kotlinx.android.synthetic.main.item_view.view.*
 
 
@@ -30,6 +33,7 @@ class Adapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
+        val model = list.get(position)
 
         Glide.with(context).load(list[position].profile_image)
                 .circleCrop().into(holder.itemView.employe_img)
@@ -41,17 +45,20 @@ class Adapter(
 
 
 
+
+
+
         holder.itemView.setOnClickListener(View.OnClickListener {
 
-//            val intent = Intent(context, DetailActivity::class.java)
-//
-//            intent.putExtra("id", list[position].id)
-//            intent.putExtra("name", list[position].employee_name)
-//            intent.putExtra("salry", list[position].employee_name)
-//            intent.putExtra("age", list[position].employee_age)
-//            intent.putExtra("profile", list[position].profile_image)
-//            intent.putExtra("position", position)
-//            context.startActivityForResult(intent, 2)
+            val intent = Intent(context, DetailActivity::class.java)
+
+            intent.putExtra("id", list[position].id)
+            intent.putExtra("name", list[position].employee_name)
+            intent.putExtra("salry", list[position].employee_salary)
+            intent.putExtra("age", list[position].employee_age)
+            intent.putExtra("profile", list[position].profile_image)
+            intent.putExtra("position", position)
+            context.startActivityForResult(intent,2)
         })
 
 
@@ -66,6 +73,8 @@ class Adapter(
 
             }
         }
+
+
     }
 
 

@@ -11,13 +11,19 @@ import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import android.widget.Toast
+
+import android.app.Activity
+
+import android.content.Intent
+import android.util.Log
 
 
 class MainActivity : AppCompatActivity() {
 
     var employeList: ArrayList<Data> = ArrayList()
     lateinit var Adapter: Adapter
-    var originalList: ArrayList<Data> = ArrayList()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_delete.setOnClickListener {
+
 
 
         }
@@ -75,11 +82,27 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-
-
-
-
+        if (requestCode == 2) {
+            if (resultCode == RESULT_OK) {
+                val result: Data? = data?.getSerializableExtra("result") as Data?
+                val position = data?.getIntExtra("position", 0)
+                if (position != null) {
+                    if (result != null) {
+                        employeList.set(position, result)
+                    }
+                }
+                if (position != null) {
+                    Adapter.notifyItemChanged(position)
+                }
+            }
+            if (resultCode == RESULT_CANCELED) {
+                Toast.makeText(this, "No result", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 
 
 

@@ -15,8 +15,8 @@ class RestClient {
         private lateinit var retrofit: Retrofit
         private lateinit var REST_CLIENT: Api
 
-        var API_URL ="https://howtodoandroid.com/"
-//        var API_URL ="http://dummy.restapiexample.com/api/v1/"
+//        var API_URL ="https://howtodoandroid.com/"
+        var API_URL ="http://dummy.restapiexample.com/api/v1/"
 
         @RequiresApi(Build.VERSION_CODES.GINGERBREAD)
         fun get(): Api {
